@@ -2,9 +2,11 @@ import { Tabs } from 'expo-router';
 import React from 'react';
 
 import { HapticTab } from '@/components/haptic-tab';
-import { FontAwesome6 } from "@react-native-vector-icons/fontawesome6"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Colors } from '@/constants/theme';
 import { useColorScheme } from '@/hooks/use-color-scheme';
+
+import { faUser } from '@fortawesome/free-solid-svg-icons'
 
 export default function TabLayout() {
   const colorScheme = useColorScheme();
@@ -20,7 +22,7 @@ export default function TabLayout() {
         name="index"
         options={{
           title: 'Login',
-          tabBarIcon: ({ color }) => <FontAwesome6 size={22} name="user" color={color} />,
+          tabBarIcon: ({ color }) => <FontAwesomeIcon icon={faUser} color={color} />,
         }}
       />
     </Tabs>
